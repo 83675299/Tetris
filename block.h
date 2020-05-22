@@ -1,31 +1,38 @@
 class block{
 	public:
-		void InitateBlock();//³õÊ¼»¯·½¿éĞÅÏ¢ 
-		void RandBlock();//Ëæ»úÉú³É·½¿é
-		void TurnBlock();//·½¿é×ª±ä·½Ïò 
-		int Speed();//¹æ¶¨·½¿éÏÂÂäµÄËÙ¶È
-		void MoveBlock_left;//·½¿é×óÒÆ 
-		void MoveBlock_right;//·½¿éÓÒ¶¯ 
-		void DownBlock;//·½¿éÏÂÂä 
-		void Speed_up;//·½¿é¼ÓËÙ 
+		void InitateBlock();//åˆå§‹åŒ–æ–¹å—ä¿¡æ¯ 
+		void BuildBlock();//ç”Ÿæˆæ–¹å—
+		void TurnBlock();//æ–¹å—è½¬å˜æ–¹å‘ 
+		void MoveBlock_left();//æ–¹å—å·¦ç§» 
+		void MoveBlock_right();//æ–¹å—å³åŠ¨ 
+		void DownBlock();//æ–¹å—ä¸‹è½ 
+		void Speed_up();//æ–¹å—åŠ é€Ÿ 
+		void start();//æ–¹å—å¼€å§‹ä¸‹è½ 
+		void cunfang();//æŠŠç”Ÿæˆçš„æ–¹å—æ”¾åˆ°æ–¹æ¡†ä¸­ï¼Œä½œä¸ºä¸‹ä¸€ä¸ªæ–¹å—ç”¨ 
 	private:
-		int	Block_1form_1[4][4];//·ÖÎª4ĞĞ4ÁĞ£¬×óĞĞÓÒÁĞ£»00 01 10 11
-		int	Block_2form_1[4][4];//00 10 11 12
-		int	Block_2form_2[4][4];//
-		int	Block_2form_3[4][4];//
-		int	Block_2form_4[4][4];//	 
-		int	Block_3form_1[4][4];//02 10 11 12
-		int	Block_3form_2[4][4];//
-		int	Block_3form_3[4][4];//
-		int	Block_3form_4[4][4];//
-		int	Block_4form_1[4][4];//01 10 11 12
-		int	Block_4form_2[4][4];//
-		int	Block_4form_3[4][4];//
-		int	Block_4form_4[4][4];//
-		int	Block_5form_1[4][4];//00 01 11 12
-		int	Block_5form_2[4][4];//
-		int	Block_6form_1[4][4];//01 02 10 11
-		int	Block_6form_2[4][4];//
-		int	Block_7form_1[4][4];//10 11 12 13
-		int	Block_7form_2[4][4];//
+		int	Block_1form_1[8]={1,0,1,1,2,0,2,1};//åˆ†ä¸º4è¡Œ4åˆ—ï¼Œå·¦è¡Œå³åˆ—ï¼›00 01 10 11
+		int	Block_2form_1[8]={1,1,2,1,2,2,2,3};//01 11 12 13
+		int	Block_2form_2[8]={1,1,1,2,2,1,3,1};//
+		int	Block_2form_3[8]={1,2,2,0,2,1,2,2};//
+		int	Block_2form_4[8]={3,1,3,2,2,2,1,2};//	 
+		int	Block_3form_1[8]={0,2,1,0,1,1,1,2};//02 10 11 12
+		int	Block_3form_2[8]={0,1,1,1,2,1,2,2};//
+		int	Block_3form_3[8]={1,1,2,1,2,2,2,3};//
+		int	Block_3form_4[8]={1,1,1,2,2,2,3,2};//
+		int	Block_4form_1[8]={1,1,2,0,2,1,2,2};//11 20 21 22
+		int	Block_4form_2[8]={1,1,2,1,3,1,2,2};//
+		int	Block_4form_3[8]={2,0,2,1,2,2,3,1};//
+		int	Block_4form_4[8]={1,1,1,2,1,3,0,2};//
+		int	Block_5form_1[8]={2,0,2,1,1,1,1,2};//20 21 11 12
+		int	Block_5form_2[8]={0,0,1,0,1,1,2,1};//
+		int	Block_6form_1[8]={0,1,0,2,1,0,1,1};//21 22 10 11
+		int	Block_6form_2[8]={0,1,1,1,2,0,2,1};//
+		int	Block_7form_1[8]={1,0,1,1,1,2,1,3};//10 11 12 13
+		int	Block_7form_2[8]={0,1,1,1,2,1,3,1};//
+		int Block_color;//æ–¹å—é¢œè‰² 
+		int Block_form;//æ–¹å—å½¢çŠ¶ 
+		int Block_[8]={0};//åˆå§‹åŒ–åçš„æ–¹å— 
+		int Block_now[8]={0};//ç°åœ¨çš„æ–¹å—
+		int Block_next[8]={0};//ä¸‹ä¸€ä¸ªçš„æ–¹å—
+		int speed;//æ–¹å—ä¸‹è½é€Ÿåº¦ 
 };
